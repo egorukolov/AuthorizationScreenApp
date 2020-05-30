@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		562B19132482720000F68D04 /* FirstTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B19122482720000F68D04 /* FirstTabBarController.swift */; };
+		562B19152482726300F68D04 /* SecondTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B19142482726300F68D04 /* SecondTabBarController.swift */; };
 		5633125E248207E200762A67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633125D248207E200762A67 /* AppDelegate.swift */; };
 		56331260248207E200762A67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633125F248207E200762A67 /* SceneDelegate.swift */; };
 		56331262248207E200762A67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56331261248207E200762A67 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		562B19122482720000F68D04 /* FirstTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabBarController.swift; sourceTree = "<group>"; };
+		562B19142482726300F68D04 /* SecondTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabBarController.swift; sourceTree = "<group>"; };
 		5633125A248207E200762A67 /* AuthorizationScreenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthorizationScreenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5633125D248207E200762A67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5633125F248207E200762A67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				56331263248207E200762A67 /* Main.storyboard */,
+				562B19122482720000F68D04 /* FirstTabBarController.swift */,
+				562B19142482726300F68D04 /* SecondTabBarController.swift */,
 				56331268248207E500762A67 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -180,6 +186,8 @@
 			files = (
 				56331262248207E200762A67 /* ViewController.swift in Sources */,
 				5633125E248207E200762A67 /* AppDelegate.swift in Sources */,
+				562B19132482720000F68D04 /* FirstTabBarController.swift in Sources */,
+				562B19152482726300F68D04 /* SecondTabBarController.swift in Sources */,
 				56331260248207E200762A67 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

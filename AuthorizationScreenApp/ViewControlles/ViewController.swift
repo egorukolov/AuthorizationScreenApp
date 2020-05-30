@@ -10,11 +10,36 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var userNameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var logInButton: UIButton!
+    @IBOutlet var forgotNameButton: UIButton!
+    @IBOutlet var forgotPasswordButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    @IBAction func logInButtonPressed() {
+        
+        guard let inputText = userNameTextField.text, inputText != "User" else { return }
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func forgotNameButtonPressed() {
+    }
+    
+    @IBAction func forgotPasswordButtonPressed() {
+    }
+    
 }
 
