@@ -56,15 +56,55 @@
 		5633125C248207E200762A67 /* AuthorizationScreenApp */ = {
 			isa = PBXGroup;
 			children = (
-				5633125D248207E200762A67 /* AppDelegate.swift */,
-				5633125F248207E200762A67 /* SceneDelegate.swift */,
-				56331261248207E200762A67 /* ViewController.swift */,
-				56331263248207E200762A67 /* Main.storyboard */,
-				56331266248207E500762A67 /* Assets.xcassets */,
-				56331268248207E500762A67 /* LaunchScreen.storyboard */,
-				5633126B248207E500762A67 /* Info.plist */,
+				563312722482093800762A67 /* ViewControlles */,
+				56331275248209EA00762A67 /* Models */,
+				563312732482098F00762A67 /* Storyboards */,
+				56331274248209AA00762A67 /* Sources */,
+				563312712482086A00762A67 /* SupportingFiles */,
 			);
 			path = AuthorizationScreenApp;
+			sourceTree = "<group>";
+		};
+		563312712482086A00762A67 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5633125D248207E200762A67 /* AppDelegate.swift */,
+				5633125F248207E200762A67 /* SceneDelegate.swift */,
+				5633126B248207E500762A67 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		563312722482093800762A67 /* ViewControlles */ = {
+			isa = PBXGroup;
+			children = (
+				56331261248207E200762A67 /* ViewController.swift */,
+			);
+			path = ViewControlles;
+			sourceTree = "<group>";
+		};
+		563312732482098F00762A67 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				56331263248207E200762A67 /* Main.storyboard */,
+				56331268248207E500762A67 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		56331274248209AA00762A67 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				56331266248207E500762A67 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		56331275248209EA00762A67 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48X7U22M49;
-				INFOPLIST_FILE = AuthorizationScreenApp/Info.plist;
+				INFOPLIST_FILE = AuthorizationScreenApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +334,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.ukolovegor23-yandex.AuthorizationScreenApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48X7U22M49;
-				INFOPLIST_FILE = AuthorizationScreenApp/Info.plist;
+				INFOPLIST_FILE = AuthorizationScreenApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.ukolovegor23-yandex.AuthorizationScreenApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
