@@ -10,21 +10,11 @@ import UIKit
 
 class FirstTabBarController: UITabBarController {
 
-    @IBOutlet var welcomeUserNameButton: UILabel!
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        // Do any additional setup after loading the view.
     }
-    
-    
-    
-    @IBAction func logOutButton(_ sender: UIButton) {
-    }
-    
     
 
     /*
