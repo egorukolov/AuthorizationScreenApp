@@ -17,16 +17,26 @@ class ViewController: UIViewController {
     @IBOutlet var forgotNameButton: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     @IBAction func logInButtonPressed(_ sender: UIButton) {
+      
+        let uniqeUser = User(login: "username", password: "password")
         
+        if (userNameTextField.text == uniqeUser.login &&
+            passwordTextField.text == uniqeUser.password) {
+            
+            performSegue(withIdentifier: "detailSegue", sender: nil)
+            
+        } else {
+            
+            showAlertIfProblemWithEntrance(with: "Oops!",
+                                           and: "Invalid username and / or password")
+            
+            userNameTextField.text = ""
+            passwordTextField.text = ""
+        }
     }
     
-    @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
+    @IBAction func  unwindSegueToMainScreen(segue: UIStoryboardSegue) {
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
@@ -34,8 +44,7 @@ class ViewController: UIViewController {
     @IBAction func forgotNameButtonPressed() {
         
         showAlertIfForgot(with: "Bazinga!",
-                          and: "You'r username is 'user'")
-        
+                          and: "You'r username is 'username'")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
@@ -43,7 +52,6 @@ class ViewController: UIViewController {
         showAlertIfForgot(with: "Bazinga!",
                           and: "You'r password is 'password'")
     }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -76,4 +84,16 @@ extension ViewController {
         
     }
     
+    private func showAlertIfProblemWithEntrance(with title: String, and massage: String) {
+        
+        let alert = UIAlertController(title: title,
+                                      message: massage,
+                                      preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok",
+                                     style: .default)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }

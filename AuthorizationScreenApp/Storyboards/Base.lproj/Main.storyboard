@@ -34,7 +34,6 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OY4-KE-lcz"/>
-                                            <segue destination="ECh-QF-geZ" kind="presentation" modalPresentationStyle="fullScreen" id="3XX-3o-VXR"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="vFR-sb-vLj">
@@ -78,6 +77,7 @@
                         <outlet property="logInButton" destination="nrN-3h-ZeB" id="29u-9R-7YX"/>
                         <outlet property="passwordTextField" destination="b5A-J3-4Xc" id="8gc-uT-oh5"/>
                         <outlet property="userNameTextField" destination="ozs-AE-4pv" id="3u7-wQ-HU7"/>
+                        <segue destination="ECh-QF-geZ" kind="presentation" identifier="detailSegue" id="VTG-Pw-MA3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,7 +87,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="d5H-ne-z1V">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ECh-QF-geZ" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ECh-QF-geZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="prT-hW-Qtx"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hw9-ge-Gue">
@@ -104,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="930" y="136.26760563380282"/>
         </scene>
-        <!--Second-->
+        <!--View Controller Two-->
         <scene sceneID="7rD-lJ-oRz">
             <objects>
                 <viewController id="af0-co-YNj" customClass="ViewControllerTwo" customModule="AuthorizationScreenApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,7 +137,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0pX-l2-NNR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="rosette" catalog="system" id="5XK-1x-Hyo"/>
+                    <tabBarItem key="tabBarItem" title="" image="rosette" catalog="system" id="5XK-1x-Hyo"/>
                     <connections>
                         <outlet property="userTextView" destination="f7n-16-xUy" id="NVk-ud-MsQ"/>
                     </connections>
@@ -146,7 +146,7 @@
             </objects>
             <point key="canvasLocation" x="1802.4000000000001" y="548.27586206896558"/>
         </scene>
-        <!--First-->
+        <!--View Controller One-->
         <scene sceneID="WFF-Gk-bWB">
             <objects>
                 <viewController id="6fQ-2X-Tc5" customClass="ViewControllerOne" customModule="AuthorizationScreenApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,7 +160,7 @@
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="logOutButtonPressed:" destination="6fQ-2X-Tc5" eventType="touchUpInside" id="via-v9-wbI"/>
-                                    <segue destination="zgN-uN-Sfq" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="ri4-xP-GYx"/>
+                                    <segue destination="zgN-uN-Sfq" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="Mlm-3Y-WWO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E89-cO-FBU">
@@ -190,7 +190,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KPJ-IS-HIU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="person.crop.circle" catalog="system" id="ItJ-hk-zvU"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.crop.circle" catalog="system" id="ItJ-hk-zvU"/>
                     <connections>
                         <outlet property="userLabel" destination="FSq-jK-Got" id="euU-75-3iG"/>
                     </connections>

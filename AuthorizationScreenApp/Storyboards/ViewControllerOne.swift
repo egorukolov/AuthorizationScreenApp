@@ -10,7 +10,6 @@ import UIKit
 
 class ViewControllerOne: UIViewController {
 
-    
     @IBOutlet var userLabel: UILabel!
     
     var login: String?
@@ -25,8 +24,6 @@ class ViewControllerOne: UIViewController {
         
     }
     
-
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
     }
-    
 }

@@ -14,13 +14,6 @@ struct User {
     let password: String
     
 }
-      
-extension User {
-    static func getLogin() -> [User] {
-        return [User(login: "user", password: "qwerty")]
-    }
-}
-    
     
     
 
