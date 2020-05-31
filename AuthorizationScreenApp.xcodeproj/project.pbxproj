@@ -15,6 +15,7 @@
 		5633126A248207E500762A67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56331268248207E500762A67 /* LaunchScreen.storyboard */; };
 		567294B82483932600B241A4 /* ViewControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567294B72483932600B241A4 /* ViewControllerOne.swift */; };
 		567294BA248393AC00B241A4 /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567294B9248393AC00B241A4 /* ViewControllerTwo.swift */; };
+		567294BC2483BDBB00B241A4 /* LoginAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567294BB2483BDBB00B241A4 /* LoginAndPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5633126B248207E500762A67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		567294B72483932600B241A4 /* ViewControllerOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerOne.swift; path = AuthorizationScreenApp/Storyboards/ViewControllerOne.swift; sourceTree = SOURCE_ROOT; };
 		567294B9248393AC00B241A4 /* ViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = SOURCE_ROOT; };
+		567294BB2483BDBB00B241A4 /* LoginAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginAndPassword.swift; path = AuthorizationScreenApp/Storyboards/LoginAndPassword.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		56331275248209EA00762A67 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				567294BB2483BDBB00B241A4 /* LoginAndPassword.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				56331262248207E200762A67 /* ViewController.swift in Sources */,
 				5633125E248207E200762A67 /* AppDelegate.swift in Sources */,
 				56331260248207E200762A67 /* SceneDelegate.swift in Sources */,
+				567294BC2483BDBB00B241A4 /* LoginAndPassword.swift in Sources */,
 				567294B82483932600B241A4 /* ViewControllerOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

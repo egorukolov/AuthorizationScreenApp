@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var forgotPasswordButton: UIButton!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,19 +26,38 @@ class ViewController: UIViewController {
     
     
     @IBAction func logInButtonPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
+        
+        
         
     }
     
     
+    
+    @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
+
+    
     @IBAction func forgotNameButtonPressed() {
+        
+        showAlertIfForgot(with: "Bazinga!",
+                          and: "Your username is 'user'")
+        
     }
     
     @IBAction func forgotPasswordButtonPressed() {
+        
+        showAlertIfForgot(with: "Bazinga!",
+                          and: "Your password is 'password'")
     }
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
     
     
     
@@ -48,10 +68,26 @@ class ViewController: UIViewController {
         destinationVC.login = userNameTextField.text
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+   
+    
+}
+
+
+    // MARK: UIAlertController
+
+extension ViewController {
+    
+    private func showAlertIfForgot(with title: String, and massage: String) {
+        
+        let alert = UIAlertController(title: title,
+                                      message: massage,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok",
+                                     style: .default)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
         
     }
-    
-    
+     
 }
