@@ -17,40 +17,31 @@ class ViewController: UIViewController {
     @IBOutlet var forgotNameButton: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    
     @IBAction func logInButtonPressed(_ sender: UIButton) {
         
-        
-        
     }
-    
-    
     
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
     
-
-    
     @IBAction func forgotNameButtonPressed() {
         
         showAlertIfForgot(with: "Bazinga!",
-                          and: "Your username is 'user'")
+                          and: "You'r username is 'user'")
         
     }
     
     @IBAction func forgotPasswordButtonPressed() {
         
         showAlertIfForgot(with: "Bazinga!",
-                          and: "Your password is 'password'")
+                          and: "You'r password is 'password'")
     }
     
     
@@ -59,19 +50,13 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
         let destinationVC = tabBarController.viewControllers?.first as! ViewControllerOne
         destinationVC.login = userNameTextField.text
     }
-    
-   
-    
 }
-
 
     // MARK: UIAlertController
 
@@ -82,6 +67,7 @@ extension ViewController {
         let alert = UIAlertController(title: title,
                                       message: massage,
                                       preferredStyle: .alert)
+        
         let okAction = UIAlertAction(title: "Ok",
                                      style: .default)
         
@@ -89,5 +75,5 @@ extension ViewController {
         present(alert, animated: true)
         
     }
-     
+    
 }

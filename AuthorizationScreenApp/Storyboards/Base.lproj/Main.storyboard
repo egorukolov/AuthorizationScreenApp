@@ -107,18 +107,44 @@
         <!--Second-->
         <scene sceneID="7rD-lJ-oRz">
             <objects>
-                <viewController id="af0-co-YNj" customClass="SecondTabBarController" customModule="AuthorizationScreenApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="af0-co-YNj" customClass="ViewControllerTwo" customModule="AuthorizationScreenApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jqd-SX-ZuT" customClass="SecondViewController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About me " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjP-Dh-QRM">
+                                <rect key="frame" x="128" y="91" width="119" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f7n-16-xUy">
+                                <rect key="frame" x="31" y="165" width="313" height="336"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QjP-Dh-QRM" firstAttribute="top" secondItem="0pX-l2-NNR" secondAttribute="top" constant="91" id="R0G-oX-3u5"/>
+                            <constraint firstItem="f7n-16-xUy" firstAttribute="centerX" secondItem="Jqd-SX-ZuT" secondAttribute="centerX" id="V3X-2Q-0F9"/>
+                            <constraint firstItem="0pX-l2-NNR" firstAttribute="bottom" secondItem="f7n-16-xUy" secondAttribute="bottom" constant="117" id="bFo-DD-7YA"/>
+                            <constraint firstItem="QjP-Dh-QRM" firstAttribute="centerX" secondItem="Jqd-SX-ZuT" secondAttribute="centerX" id="emm-dm-vPF"/>
+                            <constraint firstItem="f7n-16-xUy" firstAttribute="width" secondItem="0pX-l2-NNR" secondAttribute="height" multiplier="313:618" id="nIj-gM-iIE"/>
+                            <constraint firstItem="f7n-16-xUy" firstAttribute="top" secondItem="QjP-Dh-QRM" secondAttribute="bottom" constant="41" id="qEA-0C-6GA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0pX-l2-NNR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="rosette" catalog="system" id="5XK-1x-Hyo"/>
+                    <connections>
+                        <outlet property="userTextView" destination="f7n-16-xUy" id="NVk-ud-MsQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4J-wK-kHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1803" y="549"/>
+            <point key="canvasLocation" x="1802.4000000000001" y="548.27586206896558"/>
         </scene>
         <!--First-->
         <scene sceneID="WFF-Gk-bWB">
