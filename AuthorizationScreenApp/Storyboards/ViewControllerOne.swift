@@ -17,7 +17,7 @@ class ViewControllerOne: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let login = self.login else { return }
+        guard let login = login else { return }
         
         userLabel.text = "Welcome, \(login)!"
         userLabel.textColor = .systemBlue
