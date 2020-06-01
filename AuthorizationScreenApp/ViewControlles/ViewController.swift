@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var forgotPasswordButton: UIButton!
     
     @IBAction func logInButtonPressed(_ sender: UIButton) {
-      
+        
         let uniqeUser = User(login: "username", password: "password")
         
         if (userNameTextField.text == uniqeUser.login &&
@@ -26,31 +26,29 @@ class ViewController: UIViewController {
             
             performSegue(withIdentifier: "detailSegue", sender: nil)
             
-        } else {
-            
-            showAlertIfProblemWithEntrance(with: "Oops!",
-                                           and: "Invalid username and / or password")
+        } else {  showAlert(with: "Oops!",
+                            and: "Invalid username and / or password")
             
             userNameTextField.text = ""
             passwordTextField.text = ""
         }
     }
     
-    @IBAction func  unwindSegueToMainScreen(segue: UIStoryboardSegue) {
+    @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
     
     @IBAction func forgotNameButtonPressed() {
         
-        showAlertIfForgot(with: "Bazinga!",
-                          and: "You'r username is 'username'")
+        showAlert(with: "Bazinga!",
+                  and: "You'r username is 'username'")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
         
-        showAlertIfForgot(with: "Bazinga!",
-                          and: "You'r password is 'password'")
+        showAlert(with: "Bazinga!",
+                  and: "You'r password is 'password'")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -59,18 +57,21 @@ class ViewController: UIViewController {
     }
     
     // MARK: Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let tabBarController = segue.destination as! UITabBarController
         let destinationVC = tabBarController.viewControllers?.first as! ViewControllerOne
+        
         destinationVC.login = userNameTextField.text
     }
 }
 
-    // MARK: UIAlertController
+// MARK: UIAlertController
 
 extension ViewController {
     
-    private func showAlertIfForgot(with title: String, and massage: String) {
+    private func showAlert(with title: String, and massage: String) {
         
         let alert = UIAlertController(title: title,
                                       message: massage,
@@ -82,18 +83,5 @@ extension ViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
         
-    }
-    
-    private func showAlertIfProblemWithEntrance(with title: String, and massage: String) {
-        
-        let alert = UIAlertController(title: title,
-                                      message: massage,
-                                      preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "Ok",
-                                     style: .default)
-        
-        alert.addAction(okAction)
-        present(alert, animated: true)
     }
 }
